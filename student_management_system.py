@@ -20,7 +20,7 @@ global page1
 student_window = Toplevel()
 
 #Connection to database
-with sqlite3.connect("C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\FinalProject\\Database\\student.db") as db:
+with sqlite3.connect("C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\Final_Project\\Database\\student.db") as db:
     cur = db.cursor()
 
 
@@ -54,7 +54,7 @@ class Student:
 
         self.window_title = Label(student_window)
         self.window_title.place(relx=0, rely=0, width=1366, height=768)
-        self.img = PhotoImage(file="C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\FinalProject\\img\\StudentManageMentUI.png")
+        self.img = PhotoImage(file="C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\Final_Project\\img\\StudentManageMentUI.png")
         self.window_title.configure(image=self.img)
 
         self.final_project = Label(student_window)
@@ -318,7 +318,7 @@ class Add_student:
 
         self.label1 = Label(add_window)
         self.label1.place(relx=0, rely=0, width=1366, height=768)
-        self.img = PhotoImage(file="C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\FinalProject\\img\\AddStudent.png")
+        self.img = PhotoImage(file="C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\Final_Project\\img\\AddStudent.png")
         self.label1.configure(image=self.img)
 
         self.clock = Label(add_window)
@@ -412,7 +412,7 @@ class Add_student:
                         if add_college.strip():
                             if add_yr_lvl.strip():
                                 if valid_phone(add_contact):
-                                    with sqlite3.connect("C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\FinalProject\\Database\\student.db") as db:
+                                    with sqlite3.connect("C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\Final_Project\\Database\\student.db") as db:
                                         cur = db.cursor()
                                         insert =("""INSERT INTO student_data
                                                 (
@@ -474,7 +474,7 @@ class Update_Student:
 
         self.label1 = Label(update_window)
         self.label1.place(relx=0, rely=0, width=1366, height=768)
-        self.img = PhotoImage(file="C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\FinalProject\\img\\UpdateStudent.png")
+        self.img = PhotoImage(file="C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\Final_Project\\img\\UpdateStudent.png")
         self.label1.configure(image=self.img)
 
         self.clock = Label(update_window)
@@ -564,7 +564,7 @@ class Update_Student:
                             if up_yr_lvl.strip():
                                 if valid_phone(up_contact):
                                     student_id = valll[0]
-                                    with sqlite3.connect("C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\FinalProject\\Database\\student.db") as db:
+                                    with sqlite3.connect("C:\\Users\\Gigabyte\\Desktop\\2nd SY. 2021-2022\\Advance-OOP\\Final_Project\\Database\\student.db") as db:
                                         cur = db.cursor()
                                     update = (
                                     """UPDATE student_data SET 
